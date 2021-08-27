@@ -27,14 +27,15 @@ function Blocklist({ children }: { children: ReactNode }) {
   return <>{children}</>
 }
 
-ReactDOM.render(
-  <React.StrictMode>
+const WrappedApp = () => {
+  return (
     <Blocklist>
       <Providers>
         <Updaters />
         <App />
       </Providers>
     </Blocklist>
-  </React.StrictMode>,
-  document.getElementById('root'),
-)
+  )
+}
+
+export default WrappedApp
